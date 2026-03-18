@@ -1,4 +1,4 @@
-# MSA: Memory-Sparse Attention  
+# MSA: Memory Sparse Attention  
 *A scalable, end-to-end trainable latent-memory framework for 100M-token contexts*
 
 [**Paper**](./paper/MSA__Memory_Sparse_Attention_for_Efficient_End_to_End_Memory_Model_Scaling_to_100M_Tokens.pdf) • [**Code**](Coming Soon) • [**Models**](Coming Soon)
@@ -9,13 +9,13 @@
 
 ## 📝 Abstract
 
-Long-term memory is essential for general intelligence, yet the **full-attention** bottleneck constrains most LLMs’ **effective context length** to **128K–1M**. Existing attempts，hybrid linear attention, fixed-size state memory (e.g., RNNs), and external storage like **RAG/agents**，either suffer rapid precision decay and latency growth at extreme scales, lack end-to-end differentiability or dynamic memory maintenance, or require complex pipelines. We present **Memory-Sparse Attention (MSA)**: an **end-to-end trainable, scalable sparse** **latent-state memory** framework. Core ideas include:
+Long-term memory is essential for general intelligence, yet the **full attention** bottleneck constrains most LLMs’ **effective context length** to **128K–1M**. Existing attempts，hybrid linear attention, fixed-size state memory (e.g., RNNs), and external storage like **RAG/agents**，either suffer rapid precision decay and latency growth at extreme scales, lack end-to-end differentiability or dynamic memory maintenance, or require complex pipelines. We present **Memory Sparse Attention (MSA)**: an **end-to-end trainable, scalable sparse** **latent-state memory** framework. Core ideas include:
 
 - **Scalable sparse attention** + **document-wise RoPE** (parallel/global) achieving **near-linear complexity** in both training and inference;
-- **KV-cache compression** with a **Memory Parallel** inference engine to deliver **100M-token** throughput on **2×A800** GPUs;
+- **KV cache compression** with a **Memory Parallel** inference engine to deliver **100M token** throughput on **2×A800** GPUs;
 - **Memory Interleave** for multi-round, multi-hop reasoning across scattered memory segments.
 
-On long-context QA and NIAH (Needle-in-a-Haystack) benchmarks, **MSA** surpasses same-backbone RAG, best-of-breed RAG stacks, and leading long-context models. Across an unprecedented **16K→100M-token** range, MSA shows **< 9%** degradation, suggesting a practical path to **decouple memory capacity from reasoning**.
+On long-context QA and NIAH (Needle-in-a-Haystack) benchmarks, **MSA** surpasses same-backbone RAG, best-of-breed RAG stacks, and leading long-context models. Across an unprecedented **16K→100M token** range, MSA shows **< 9%** degradation, suggesting a practical path to **decouple memory capacity from reasoning**.
 
 > **Scaling from 16K→100M tokens**: MSA fuses top-k selection with sparse attention to remain end-to-end differentiable while allowing document decoupling at inference. On MS MARCO, MSA sustains **<9%** degradation and exhibits strong extrapolation.  
 > *Some baseline curves end early due to their context limits.*
