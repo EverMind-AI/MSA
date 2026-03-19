@@ -134,8 +134,32 @@ MSA uses a **three-stage** pipeline (Fig. 3):
 
 ---
 
-## Citation (Coming soon)
+## Citation
 
+```bibtex
+@misc{chen_2026_19103670,
+  author       = {Chen, Yu and
+                  Chen, Runkai and
+                  Yi, Sheng and
+                  Zhao, Xinda and
+                  Li, Xiaohong and
+                  Zhang, Jianjin and
+                  Sun, Jun and
+                  Hu, Chuanrui and
+                  Han, Yunyun and
+                  Bing, Lidong and
+                  Deng, Yafeng and
+                  Chen, Tianqiao},
+  title        = {MSA: Memory Sparse Attention for Efficient End-to-
+                   End Memory Model Scaling to 100M Tokens
+                  },
+  month        = mar,
+  year         = 2026,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.19103670},
+  url          = {https://doi.org/10.5281/zenodo.19103670},
+}
+```
 
 ### Acknowledgments
 This repository and documentation page are maintained by the MSA authors. For project updates, please visit the **Homepage**: https://evermind.ai/
