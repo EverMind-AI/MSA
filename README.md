@@ -1,7 +1,7 @@
 # MSA: Memory Sparse Attention  
 *A scalable, end-to-end trainable latent-memory framework for 100M-token contexts*
 
-[**Paper**](./paper/MSA__Memory_Sparse_Attention_for_Efficient_End_to_End_Memory_Model_Scaling_to_100M_Tokens.pdf) • [**Code**](Coming Soon) • [**Models**](Coming Soon)
+[**arXiv**](https://arxiv.org/abs/2603.23516) • [**Zenodo**](https://zenodo.org/records/19103670) • [**Code**](Coming Soon) • [**Models**](Coming Soon)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -137,27 +137,14 @@ MSA uses a **three-stage** pipeline (Fig. 3):
 ## Citation
 
 ```bibtex
-@misc{chen_2026_19103670,
-  author       = {Chen, Yu and
-                  Chen, Runkai and
-                  Yi, Sheng and
-                  Zhao, Xinda and
-                  Li, Xiaohong and
-                  Zhang, Jianjin and
-                  Sun, Jun and
-                  Hu, Chuanrui and
-                  Han, Yunyun and
-                  Bing, Lidong and
-                  Deng, Yafeng and
-                  Chen, Tianqiao},
-  title        = {MSA: Memory Sparse Attention for Efficient End-to-
-                   End Memory Model Scaling to 100M Tokens
-                  },
-  month        = mar,
-  year         = 2026,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.19103670},
-  url          = {https://doi.org/10.5281/zenodo.19103670},
+@misc{chen2026msamemorysparseattention,
+      title={MSA: Memory Sparse Attention for Efficient End-to-End Memory Model Scaling to 100M Tokens}, 
+      author={Yu Chen and Runkai Chen and Sheng Yi and Xinda Zhao and Xiaohong Li and Jianjin Zhang and Jun Sun and Chuanrui Hu and Yunyun Han and Lidong Bing and Yafeng Deng and Tianqiao Chen},
+      year={2026},
+      eprint={2603.23516},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2603.23516}, 
 }
 ```
 
