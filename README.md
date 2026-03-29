@@ -1,4 +1,5 @@
-# MSA：记忆稀疏注意力
+# MSA：Memory Sparse Attention - MSA 的亿级 Token 端到端可训练记忆框架 
+
 *一个可扩展、端到端可训练的隐式记忆框架，支持 1 亿 token 上下文*
 
 [**arXiv**](https://arxiv.org/abs/2603.23516) • [**Zenodo**](https://zenodo.org/records/19103670) • [**代码**](Coming Soon) • [**模型**](Coming Soon)
