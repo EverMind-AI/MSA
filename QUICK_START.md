@@ -77,7 +77,7 @@ rm /tmp/flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp312-cp312-linux_x86_6
 
 ```bash
 mkdir ckpt
-pip install -U huggingface_hub
+pip install -U huggingface_hub==0.31.4
 export HF_ENDPOINT=https://hf-mirror.com
 huggingface-cli download --resume-download EverMind-AI/MSA-4B --local-dir ckpt/MSA-4B
 ```
