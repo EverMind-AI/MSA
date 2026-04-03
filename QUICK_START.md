@@ -1,7 +1,7 @@
 ## Project Structure
 
 ```
-MSAEnginev3/
+MSA/
 ├── scripts/
 │   ├── run_benchmarks.sh          # Run inference on benchmarks
 │   ├── calculate_llm_score.sh     # LLM-based answer evaluation
