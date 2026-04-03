@@ -1,0 +1,38 @@
+# 模型超参数
+export POOLING_KERNEL_SIZE=64
+export TOP_K_DOCS=16
+
+# trick
+export AUX_LOSS="false"
+
+export REWRITE_POSITION="true"
+export ROUTER_LAYER_IDX="18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35"
+# export ROUTER_LAYER_IDX="20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39"
+
+# special tokens
+export ADD_MEM_TOKENS="false"
+export NUM_PREFIX_TOKENS=64
+export NUM_TAIL_TOKENS=64
+export FIRST_ADD_MEM_TOKENS="false"
+export WARM_UP_MEM_TOKENS="false"
+
+
+# loss weight
+export LMLOSS_WEIGHT=1.0
+export REC_LOSS_WEIGHT=0.0
+export AUX_LOSS_WEIGHT=0.1
+export ANS_LOSS_WEIGHT=1.0
+export AUX_LOSS_METHOD="INFONCE_DECOUPLE"  # INFONCE, INFONCE_FOCAL, BCE, INFONCE_DECOUPLE, INFONCE_DECOUPLE_FOCAL
+export INFONCE_LOSS_TEMP=0.1   # 如果使用infonce的话
+
+# 结构搜索
+export DECOUPLE_ROUTER="true"
+export HEAD_REDUCE_METHOD="mean"
+export QUERY_REDUCE_METHOD="max"
+export CHUNK_REDUCE_METHOD="max"
+export DECOUPLE_POOLING_MODE="mean"
+
+ORIGIN_MODEL_PATH=$1
+SAVE_MODEL_PATH=$2
+
+python src/utils/resave_model.py $ORIGIN_MODEL_PATH $SAVE_MODEL_PATH
