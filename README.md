@@ -1,9 +1,9 @@
 # MSA: Memory Sparse Attention
 *A scalable, end-to-end trainable latent-memory framework for 100M-token contexts*
 
-[**arXiv**](https://arxiv.org/abs/2603.23516) • [**Zenodo**](https://zenodo.org/records/19103670) • [**Code**](Coming Soon) • [**Models**](Coming Soon)
+[**arXiv**](https://arxiv.org/abs/2603.23516) • [**Zenodo**](https://zenodo.org/records/19103670)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![EverMind](https://img.shields.io/badge/EverMind-Organization-blue?logo=github)](https://github.com/EverMind-AI) [![EverMemOS](https://img.shields.io/badge/EverOS-Repo-green?logo=github)](https://github.com/EverMind-AI/evermemos)
+[![Models](https://img.shields.io/badge/HuggingFace-MSA--4B-yellow?logo=huggingface)](https://huggingface.co/EverMind-AI/MSA-4B) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![EverMind](https://img.shields.io/badge/EverMind-Organization-blue?logo=github)](https://github.com/EverMind-AI) [![EverMemOS](https://img.shields.io/badge/EverOS-Repo-green?logo=github)](https://github.com/EverMind-AI/evermemos)
 
 [中文](./README_ZH.md)
 
@@ -131,6 +131,41 @@ MSA uses a **three-stage** pipeline (Fig. 3):
 
 - **Training**: 158.95B-token continuous pretraining with **auxiliary routing loss**, followed by two-stage SFT (**8k→64k** curriculum).
 - **Ablations** (paper Table 4): curriculum extension, Memory Interleave, continuous pretraining, and injecting original text all contribute substantially; removing them causes **5%–37%** drops depending on task.
+
+---
+
+## 🚀 Quick Start
+
+> For full details (project structure, supported benchmarks, etc.), see [**QUICK_START.md**](./QUICK_START.md).
+
+**1. Install**
+
+```bash
+conda create -n msa python=3.12 -y && conda activate msa
+pip install -r requirements.txt
+pip install flash-attn==2.7.4.post1 --no-build-isolation
+```
+
+**2. Download model**
+
+```bash
+mkdir ckpt
+huggingface-cli download --resume-download EverMind-AI/MSA-4B --local-dir ckpt/MSA-4B
+```
+
+**3. Download benchmarks**
+
+Benchmark data is hosted on [EverMind-AI/MSA-RAG-BENCHMARKS](https://huggingface.co/datasets/EverMind-AI/MSA-RAG-BENCHMARKS) and will be automatically downloaded to `data/` on first run.
+
+**4. Run**
+
+```bash
+# Run inference on benchmarks
+bash scripts/run_benchmarks.sh eval_benchmark
+
+# Compute LLM-based scores
+bash scripts/calculate_llm_score.sh eval_benchmark
+```
 
 ---
 

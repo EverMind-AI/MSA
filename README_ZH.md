@@ -2,9 +2,9 @@
 
 *一个可扩展、端到端可训练的隐式记忆框架，支持 1 亿 token 上下文*
 
-[**arXiv**](https://arxiv.org/abs/2603.23516) • [**Zenodo**](https://zenodo.org/records/19103670) • [**代码**](Coming Soon) • [**模型**](Coming Soon)
+[**arXiv**](https://arxiv.org/abs/2603.23516) • [**Zenodo**](https://zenodo.org/records/19103670)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![EverMind](https://img.shields.io/badge/EverMind-Organization-blue?logo=github)](https://github.com/EverMind-AI) [![EverMemOS](https://img.shields.io/badge/EverOS-Repo-green?logo=github)](https://github.com/EverMind-AI/evermemos)
+[![Models](https://img.shields.io/badge/HuggingFace-MSA--4B-yellow?logo=huggingface)](https://huggingface.co/EverMind-AI/MSA-4B) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![EverMind](https://img.shields.io/badge/EverMind-Organization-blue?logo=github)](https://github.com/EverMind-AI) [![EverMemOS](https://img.shields.io/badge/EverOS-Repo-green?logo=github)](https://github.com/EverMind-AI/evermemos)
 
 ## 📝 摘要
 
@@ -130,6 +130,41 @@ MSA 采用**三阶段**流水线（图 3）：
 
 - **训练**：1589.5 亿 token 持续预训练，使用**辅助路由损失**，随后进行两阶段 SFT（**8k→64k** 课程学习）。
 - **消融实验**（论文表 4）：课程扩展、记忆交织、持续预训练和注入原始文本均有显著贡献；移除它们会导致 **5%–37%** 不等的性能下降。
+
+---
+
+## 🚀 快速开始
+
+> 完整说明（项目结构、支持的基准测试等）请参见 [**QUICK_START.md**](./QUICK_START.md)。
+
+**1. 安装**
+
+```bash
+conda create -n msa python=3.12 -y && conda activate msa
+pip install -r requirements.txt
+pip install flash-attn==2.7.4.post1 --no-build-isolation
+```
+
+**2. 下载模型**
+
+```bash
+mkdir ckpt
+huggingface-cli download --resume-download EverMind-AI/MSA-4B --local-dir ckpt/MSA-4B
+```
+
+**3. 下载基准数据**
+
+基准数据托管在 [EverMind-AI/MSA-RAG-BENCHMARKS](https://huggingface.co/datasets/EverMind-AI/MSA-RAG-BENCHMARKS)，首次运行时会自动下载到 `data/` 目录。
+
+**4. 运行**
+
+```bash
+# 在基准测试上运行推理
+bash scripts/run_benchmarks.sh eval_benchmark
+
+# 计算 LLM 评分
+bash scripts/calculate_llm_score.sh eval_benchmark
+```
 
 ---
 
