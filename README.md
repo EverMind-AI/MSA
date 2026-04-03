@@ -3,7 +3,7 @@
 
 [**arXiv**](https://arxiv.org/abs/2603.23516) • [**Zenodo**](https://zenodo.org/records/19103670)
 
-[![Models](https://img.shields.io/badge/HuggingFace-MSA--4B-yellow?logo=huggingface)](https://huggingface.co/EverMind-AI/MSA-4B) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![EverMind](https://img.shields.io/badge/EverMind-Organization-blue?logo=github)](https://github.com/EverMind-AI) [![EverMemOS](https://img.shields.io/badge/EverOS-Repo-green?logo=github)](https://github.com/EverMind-AI/evermemos)
+[![Models](https://img.shields.io/badge/HuggingFace-MSA--4B-yellow?logo=huggingface)](https://huggingface.co/EverMind-AI/MSA-4B) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![EverMind](https://img.shields.io/badge/EverMind-Organization-blue?logo=github)](https://github.com/EverMind-AI) [![EverMemOS](https://img.shields.io/badge/EverMemOS-Repo-green?logo=github)](https://github.com/EverMind-AI/evermemos)
 
 [中文](./README_ZH.md)
 
