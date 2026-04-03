@@ -4,7 +4,7 @@
 
 [**arXiv**](https://arxiv.org/abs/2603.23516) • [**Zenodo**](https://zenodo.org/records/19103670) • [**代码**](Coming Soon) • [**模型**](Coming Soon)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![EverMind](https://img.shields.io/badge/EverMind-Organization-blue?logo=github)](https://github.com/EverMind-AI) [![EverOS](https://img.shields.io/badge/EverOS-Repo-green?logo=github)](https://github.com/EverMind-AI/evermemos)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![EverMind](https://img.shields.io/badge/EverMind-Organization-blue?logo=github)](https://github.com/EverMind-AI) [![EverMemjkOS](https://img.shields.io/badge/EverOS-Repo-green?logo=github)](https://github.com/EverMind-AI/evermemos)
 
 [English](./README_EN.md) | 中文
 
