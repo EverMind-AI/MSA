@@ -1,3 +1,6 @@
+![](https://github.com/user-attachments/assets/9934aa40-5572-4625-9ab6-03d24c52848f)
+
+
 # MSA: Memory Sparse Attention
 *A scalable, end-to-end trainable latent-memory framework for 100M-token contexts*
 
